@@ -19,11 +19,13 @@ Finure is a cloud-native application designed to streamline the credit card appl
 - Parallel, Reliable & Governed Infra Changes: Atlantis integration for PR-based, machine-oriented Terraform executions with custom workflows
 - Checkov Integration: Validates Terraform code for security and best practices
 - YAML Abstraction: Reduces complexity of Terraform code using YAML for defining resources for Finure microservices
+- Flagger Integration: Blue/Green progressive delivery for Finure microservices updates with automated rollouts using smoke and load tests along with rollbacks
 
 ### Application Infrastructure (Helm & Kubernetes)
-- Apps & Infra Deployments: Flux resources for deploying infra components such as Airflow, Argo Events, Argo Workflows, Atlantis, Kafka, Kserve, Knative, KEDA, Istio, PostgreSQL, SonarQube, Velero, Tekton and more and applications such as app-frontend, app-backend, app-gateway, app-seedjob
-- Observability Stack: Prometheus, Grafana, Fluent Bit, Loki, Jaeger, Kiali, OpenTelemetry and Opencost
+- Apps & Infra Deployments: Flux resources for deploying infra components such as Airflow, Argo Events, Argo Workflows, Atlantis, Kafka, Kserve, Knative, KEDA, Istio, PostgreSQL, SonarQube, Velero, Tekton, Chaos Mesh, Kubernetes Gateway API with Istio controller, Chaos Mesh and more and applications such as app-frontend, app-backend, app-gateway, app-seedjob
+- Observability Stack: Prometheus, Grafana, Fluent Bit, Loki, Kiali, Beyla, OpenTelemetry, SigNoz and Opencost
 - Security & Policy: Hashicorp Vault, Cert-Manager, Kyverno, External-DNS, Reflector, External Secrets Operator
+- Progressive delivery: Blue/Green progressive delivery using Flagger for Finure microservices updates with automated rollouts using smoke and load tests along with rollbacks
 
 ### CI/CD & Automation (Tekton, Atlantis, GitHub Actions)
 - Tekton Pipelines: End-to-end CI/CD for all Finure repos, triggered by GitHub webhooks. Includes linting, security scans (Checkov, Snyk, SonarQube, Trivy), multi-stage multi-arch builds (Buildah), image publishing (GHCR), Helm chart updates, GitHub releases, automatic rollouts via Flux and Slack/GitHub notifications
